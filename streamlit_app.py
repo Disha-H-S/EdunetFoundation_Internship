@@ -21,7 +21,7 @@ def load_encoders():
 model = load_model()
 encoders = load_encoders()
 # --- Streamlit UI ---
-st.title("Linear Regression Predictor")
+st.title("Salary Predictor using Linear Regression")
 st.write("This app predicts an employee's salary based on a given set of features.")
 
 # --- User Input ---
@@ -192,7 +192,7 @@ if st.button("Predict"):
     input_df['Job Title'] = encoders["job_title"].transform(input_df['Job Title'])
 
     prediction = model.predict(input_df)
-    st.success(f":chart_with_upwards_trend: Predicted Output: **{prediction[0]:.2f}**")
+    st.success(f":chart_with_upwards_trend: Predicted Salary: **{prediction[0]:.2f}**")
 
 # Optional: Display raw input
 with st.expander("See input data"):

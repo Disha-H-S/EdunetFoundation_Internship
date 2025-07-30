@@ -11,11 +11,11 @@ def load_model():
 
 def load_encoders():
     encoders = dict()
-    with open('gender_encoder_new.pkl', 'rb') as f:
+    with open('gender_encoder.pkl', 'rb') as f:
         encoders['gender'] = pickle.load(f)
-    with open('education_encoder_new.pkl', 'rb') as f:
+    with open('education_encoder.pkl', 'rb') as f:
         encoders['education'] = pickle.load(f)
-    with open('job_encoder_new.pkl', 'rb') as f:
+    with open('job_encoder.pkl', 'rb') as f:
         encoders['job_title'] = pickle.load(f)
     return encoders
 model = load_model()
